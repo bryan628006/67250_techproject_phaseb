@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MonoMuse website redesign project">
+    <title>MonoMuse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./static/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="./static/script.js" defer></script>
+</head>
+
+<body onload="addYear()">
+
+    <div class="container">
+        <header class="header">
+            <img id="logo" src="./static/Monomuse logo.png" alt="MonoMuse Museum Logo">
+        </header>
+
+        <nav class="nav_bar" id="mainNav">
+            <button class="hamburger" onclick="toggleNav()">&#9776;</button>
+            <a href="index.html">Home</a>
+            <a href="views/explore.html">Explore</a>
+            <a href="views/exhibitions.html">Exhibitions</a>
+            <a href="views/tickets.html">Tickets</a>
+            <a href="views/checkout.html">Checkout</a>
+        </nav>
+
+        <main class="main full-width-main home-hero">
+            <h2 id="greeting">Welcome to MonoMuse Museum</h2>
+            <p>MonoMuse is a contemporary museum dedicated to exploring the intersection of art, technology, and human
+                creativity. Through immersive exhibitions, interactive installations, and rotating collections, MonoMuse
+                invites visitors to discover how digital innovation is transforming the way we create, experience, and
+                understand art. Whether you are a first-time visitor or a returning member, our exhibitions offer new
+                perspectives on the role of technology in culture and everyday life. Plan your visit to experience
+                cutting-edge exhibitions, hands-on experiences, and events designed to inspire curiosity and creativity.
+            </p>
+
+            <a href="views/tickets.html" class="cta">Buy Tickets</a>
+
+            <h3>Find Us</h3>
+            <div id="map" style="height: 400px; width: 100%; margin-top: 20px; border-radius: 12px; z-index: 1;"></div>
+
+            <div class="toggle-section">
+                <p id="shortIntro">MonoMuse is more than just a gallery—it's a hub for tech-driven artistic exploration.
+                    Our visitors often share that seeing code come to life in a visual way changed how they perceive
+                    both art and technology.</p>
+                <p id="longIntro">Beyond the main galleries, we offer workshops on creative coding, AI-generated art,
+                    and VR design. Our goal is to bridge the gap between complex engineering and human emotion,
+                    providing a unique space where the next generation of creators can find inspiration and community.
+                    Whether you're here for a quick tour or a deep dive into our labs, there's always something new to
+                    discover at MonoMuse.</p>
+
+                <button id="readMore" class="toggle-btn">Read More</button>
+                <button id="readLess" class="toggle-btn">Read Less</button>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; <span id="copyYear"></span> MonoMuse. All rights reserved.</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>
