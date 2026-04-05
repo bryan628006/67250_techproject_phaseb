@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Learn about MonoMuse's mission, history, membership options, and frequently asked questions.">
+    <title>Explore — MonoMuse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="../static/script.js" defer></script>
+</head>
+
+<body onload="addYear()">
+
+    <div class="container">
+        <header class="header">
+            <img id="logo" src="../static/Monomuse logo.png" alt="MonoMuse Museum Logo">
+        </header>
+
+        <nav class="nav_bar" id="mainNav">
+            <button class="hamburger" onclick="toggleNav()">&#9776;</button>
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="tickets.html">Tickets</a>
+            <a href="checkout.html">Checkout</a>
+        </nav>
+
+        <main class="main full-width-main">
+            <h2>Explore MonoMuse</h2>
+            <img src="../static/Monomuse Image Explore.png"
+                alt="Interior of MonoMuse with visitors exploring digital art installations" width="100%">
+
+            <h3>Mission Statement</h3>
+            <p>MonoMuse is dedicated to exploring the evolving relationship between art, technology, and society. Our
+                mission is
+                to inspire curiosity and creativity by showcasing innovative exhibitions that highlight how digital
+                tools,
+                emerging technologies, and human imagination shape the future of artistic expression.</p>
+
+            <h3>Who We Serve</h3>
+            <p>We serve a diverse community of artists, technologists, students, and curious minds from across the
+                globe,
+                fostering a space where everyone can engage with the cutting edge of contemporary creativity.</p>
+
+            <h3>Founding Year</h3>
+            <p>MonoMuse was established in 2015 as an experimental laboratory for digital art.</p>
+
+            <h3>Milestones</h3>
+            <ul>
+                <li>2023: Expansion of the museum space and launch of international artist collaborations.</li>
+                <li>2018: Launch of the Interactive Media Lab, allowing visitors to experiment with creative coding.
+                </li>
+                <li>2016: MonoMuse opens its doors with its first exhibition on digital storytelling.</li>
+            </ul>
+
+            <!-- ===== Membership & Donation ===== -->
+            <section class="membership-section" id="membership" aria-labelledby="membershipHeading">
+                <h3 id="membershipHeading">Support MonoMuse</h3>
+                <p>Your membership helps MonoMuse continue its mission of connecting art, technology, and community.
+                    Choose a tier that works for you — or make a one-time donation.</p>
+
+                <div class="membership-tiers">
+
+                    <div class="tier-card">
+                        <h4>Friend</h4>
+                        <div class="tier-price">$60<small>/yr</small></div>
+                        <ul>
+                            <li>Unlimited free admission</li>
+                            <li>10% museum shop discount</li>
+                            <li>Advance exhibition notices</li>
+                        </ul>
+                        <a href="checkout.html" class="tier-cta">Join</a>
+                    </div>
+
+                    <div class="tier-card">
+                        <h4>Supporter</h4>
+                        <div class="tier-price">$120<small>/yr</small></div>
+                        <ul>
+                            <li>All Friend benefits</li>
+                            <li>2 complimentary guest passes</li>
+                            <li>Invitations to member events</li>
+                        </ul>
+                        <a href="checkout.html" class="tier-cta">Join</a>
+                    </div>
+
+                    <div class="tier-card">
+                        <h4>Patron</h4>
+                        <div class="tier-price">$250<small>/yr</small></div>
+                        <ul>
+                            <li>All Supporter benefits</li>
+                            <li>Private curator walkthrough</li>
+                            <li>Recognition in exhibition catalog</li>
+                        </ul>
+                        <a href="checkout.html" class="tier-cta">Join</a>
+                    </div>
+
+                </div>
+
+                <p class="text-body-2" style="margin-top: 24px; color: #555;">
+                    Interested in a larger donation or corporate sponsorship?
+                    <a href="mailto:donations@monomuse.org">Contact our development team</a> to discuss options.
+                </p>
+            </section>
+
+            <!-- ===== FAQ Accordion (jQuery) ===== -->
+            <section class="faq-section" aria-labelledby="faqHeading">
+                <h3 id="faqHeading">Frequently Asked Questions</h3>
+
+                <div class="accordion-item">
+                    <button type="button" class="accordion-btn" aria-expanded="false">
+                        Is there parking available at MonoMuse?
+                        <span class="icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="accordion-body">
+                        Street parking is available nearby. We recommend the 54th Street Parking Garage, a 3-minute walk
+                        from the museum. Public transit is strongly encouraged for visitors from outside the area.
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button type="button" class="accordion-btn" aria-expanded="false">
+                        Are children admitted free?
+                        <span class="icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="accordion-body">
+                        Yes! Children aged 12 and under are admitted free with a paying adult. We welcome families and
+                        offer a dedicated interactive lab space designed for younger visitors.
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button type="button" class="accordion-btn" aria-expanded="false">
+                        Can I take photographs inside the museum?
+                        <span class="icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="accordion-body">
+                        Personal, non-commercial photography is permitted in most gallery spaces. Flash photography and
+                        tripods are not allowed. Some special exhibitions may restrict photography — look for signage at
+                        each gallery entrance.
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button type="button" class="accordion-btn" aria-expanded="false">
+                        How do I redeem a student or member discount?
+                        <span class="icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="accordion-body">
+                        Present a valid student ID or MonoMuse membership card when purchasing tickets online or at the
+                        admissions desk. Discounts cannot be applied retroactively after purchase.
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button type="button" class="accordion-btn" aria-expanded="false">
+                        Does MonoMuse offer group or school rates?
+                        <span class="icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="accordion-body">
+                        Yes. Groups of 10 or more and registered school groups receive a discounted rate.
+                        Please <a href="mailto:groups@monomuse.org">email our groups team</a> at least two weeks in
+                        advance to arrange a booking.
+                    </div>
+                </div>
+
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; <span id="copyYear"></span> MonoMuse. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
