@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse MonoMuse's current exhibitions exploring art, algorithms, and creative technology.">
+    <title>Exhibitions — MonoMuse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/style.css">
+    <!-- jQuery — shared script.js uses $(document).ready for accordion (no-op here if empty) -->
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <script src="../static/script.js" defer></script>
+    <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+</head>
+
+<body onload="addYear()">
+
+    <div class="container">
+        <header class="header">
+            <img id="logo" src="../static/Monomuse logo.png" alt="MonoMuse Museum Logo">
+        </header>
+
+        <nav class="nav_bar" id="mainNav">
+            <button class="hamburger" onclick="toggleNav()">&#9776;</button>
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="tickets.html">Tickets</a>
+            <a href="checkout.html">Checkout</a>
+        </nav>
+
+        <main class="main full-width-main">
+            <h2>Current Exhibitions</h2>
+            <div class="exhibition-entry">
+                <img src="../static/monomuse exhibition 1.png" alt="Colorful algorithm-generated patterns displayed across gallery walls in Digital Dreams exhibition" width="100%">
+                <div class="exhibition-text">
+                    <h3>Exhibition 1: Digital Dreams: Art in the Age of Algorithms</h3>
+                    <p>This exhibition explores how artists are using algorithms, artificial intelligence, and
+                        generative tools to
+                        create new forms of digital expression. Through interactive displays and dynamic visuals,
+                        visitors can see
+                        how machines and human creativity work together to produce art that evolves in real time.</p>
+                </div>
+            </div>
+
+            <div class="exhibition-entry">
+                <img src="../static/monomuse exhibition 2.png" alt="Geometric projection installation with code-generated patterns on display in Code and Canvas exhibition" width="100%">
+                <div class="exhibition-text">
+                    <h3>Exhibition 2: Code & Canvas: The Language of Creative Technology</h3>
+                    <p>Code & Canvas highlights the ways programming has become a medium for artistic creation.
+                        Featuring works by
+                        digital artists and designers, the exhibition showcases installations, projections, and
+                        interactive pieces
+                        that reveal how lines of code can transform into immersive visual experiences.</p>
+                </div>
+            </div>
+
+            <section class="video-section">
+                <h3>Virtual Tour: Immersive Digital Art</h3>
+                <div class="video-container">
+                    <!-- YouTube embed — © respective rights holders; embedded for educational use -->
+                    <iframe class="responsive-iframe"
+                        src="https://www.youtube.com/embed/fdcEKPS6tOQ?si=2JQS5WDNGzHM08CW"
+                        title="Virtual tour of immersive digital art at MonoMuse Museum"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </section>
+
+            <!-- ===== Interactive Gallery Slideshow ===== -->
+            <section class="gallery-section" aria-labelledby="galleryHeading">
+                <h3 id="galleryHeading">Gallery</h3>
+                <p>Browse highlights from our current and past exhibitions.</p>
+
+                <div class="gallery-slideshow" id="gallery" aria-label="Exhibition photo gallery">
+
+                    <div class="slide active">
+                        <img src="../static/monomuse exhibition 1.png"
+                             alt="Digital Dreams: colorful algorithm-generated patterns fill the gallery walls">
+                        <div class="gallery-caption">Digital Dreams: Art in the Age of Algorithms</div>
+                    </div>
+
+                    <div class="slide">
+                        <img src="../static/monomuse exhibition 2.png"
+                             alt="Code and Canvas: geometric code-generated projections illuminate the space">
+                        <div class="gallery-caption">Code &amp; Canvas: The Language of Creative Technology</div>
+                    </div>
+
+                    <div class="slide">
+                        <img src="../static/Monomuse Image Explore.png"
+                             alt="MonoMuse museum interior with visitors exploring interactive digital art installations">
+                        <div class="gallery-caption">MonoMuse — Where Art Meets Technology</div>
+                    </div>
+
+                    <button type="button" class="gallery-btn gallery-prev" id="galleryPrev" aria-label="Previous image">&#8249;</button>
+                    <button type="button" class="gallery-btn gallery-next" id="galleryNext" aria-label="Next image">&#8250;</button>
+
+                </div>
+
+                <div class="gallery-dots" role="group" aria-label="Gallery slide indicators">
+                    <button type="button" class="dot active" data-index="0" aria-label="Go to image 1"></button>
+                    <button type="button" class="dot" data-index="1" aria-label="Go to image 2"></button>
+                    <button type="button" class="dot" data-index="2" aria-label="Go to image 3"></button>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; <span id="copyYear"></span> MonoMuse. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
